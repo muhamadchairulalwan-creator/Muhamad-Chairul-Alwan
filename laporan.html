@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Laporan Absensi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="dashboard-light-theme">
+    <nav class="button-nav-group">
+        <a href="dashboard.html" class="nav-button">Absensi</a>
+        <a href="laporan.html" class="nav-button active">Laporan</a>
+        <a href="#" onclick="handleLogout()" class="nav-button logout-btn">Logout</a>
+    </nav>
+
+    <main class="container">
+        <div class="card dashboard-card">
+            <h2>Rekap Riwayat Absensi</h2>
+
+            <!-- Area Ringkasan Rekap -->
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Masuk</h3>
+                    <p id="rekap-masuk">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Pulang</h3>
+                    <p id="rekap-pulang">0</p>
+                </div>
+            </div>
+
+            <!-- Tabel Laporan -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Tanggal</th>
+                            <th>Waktu</th>
+                            <th>Tipe</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendance-log">
+                        <!-- Data akan dimasukkan oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <button class="btn-danger" onclick="clearLogs()">Hapus Semua Log</button>
+
+        </div>
+    </main>
+</body>
+</html>

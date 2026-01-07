@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Absensi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-light-theme"> <!-- TEMA DOMINAN PUTIH -->
+    <nav class="button-nav-group">
+        <a href="dashboard.html" class="nav-button active">Absensi</a>
+        <a href="laporan.html" class="nav-button">Laporan</a>
+        <a href="#" onclick="handleLogout()" class="nav-button logout-btn">Logout</a>
+    </nav>
+
+    <main class="container">
+        <div class="card dashboard-card">
+            
+            <div class="clock-container">
+                <h1 id="live-clock">00:00:00</h1>
+                <p id="live-date">Memuat tanggal...</p>
+            </div>
+            
+            <div class="status-badge">Status: Belum Absen</div>
+
+            <div class="action-buttons">
+                <button class="btn-primary btn-absen" onclick="submitAbsen('Masuk')">
+                    <span>MASUK</span>
+                </button>
+                <button class="btn-danger btn-absen" onclick="submitAbsen('Pulang')">
+                    <span>PULANG</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

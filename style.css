@@ -1,0 +1,496 @@
+/* RESET DAN GLOBAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Hapus background-color: #f0f2f5; di sini */
+    /* Warna background akan diatur per halaman (login/dashboard) */
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+}
+
+
+/* JUDUL */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* BUTTON UMUM */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* BUTTON PRIMARY */
+.btn-primary { 
+    background: #DADADA;
+    color: #181818;
+    font-weight: bold;         /* Membuat tulisan jadi tebal */
+    letter-spacing: 2.5px;       /* Memberi jarak antar huruf agar lebih elegan */
+    text-transform: uppercase; /* Memastikan semua huruf jadi kapital (opsional) */   
+    padding: 12px 20px;        /* Memberi ruang di dalam tombol */
+    cursor: pointer;           /* Mengubah kursor saat diarahkan ke tombol */
+}
+
+.btn-primary:hover { 
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* BUTTON DANGER */
+.btn-danger {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* LINK SWITCH */
+.switch-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+/* HALMAN LOGIN */
+body.login-page {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('truck.jfif');
+    background-size: cover; /* PASTIKAN BARIS INI ADA */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CARD LOGIN (GLASS EFFECT */
+body.login-page .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(1px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0;
+    z-index: 1;
+}
+
+/* INPUT LOGIN */
+body.login-page input {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+body.login-page input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* FOCUS INPUT */
+input:focus {
+    outline: none;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+/* BUTTON LOGIN */
+body.login-page .btn-primary {
+    background: white;
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.login-page .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+/* TEKS LOGIN */
+body.login-page h2,
+body.login-page .switch-link {
+    color: white;
+}
+
+body.login-page .switch-link a {
+    color: #FF6A37;
+}
+
+/* HALAMAN SIGN UP */
+body.signup-page {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('truck.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CARD SIGN UP (SAMA DENGAN LOGIN) */
+body.signup-page .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(1px);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0;
+    z-index: 1;
+}
+
+/* INPUT SIGN UP */
+body.signup-page input {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+body.signup-page input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* BUTTON SIGN UP */
+body.signup-page .btn-primary {
+    background: white;
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+body.signup-page .btn-primary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+/* TEKS SIGN UP */
+body.signup-page h2,
+body.signup-page .switch-link {
+    color: white;
+}
+
+body.signup-page .switch-link a {
+    color: #FF6A37;
+}
+
+/* ICON MATA PASSWORD JADI PUTIH (CHROME / EDGE) */
+input[type="password"]::-ms-reveal {
+    filter: invert(1);
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    filter: invert(1);
+}
+
+
+
+/* LAPORAN */
+body.report-page {
+    background-color: #ffffff;
+}
+
+
+
+/* ===================================== */
+/* ANIMASI NEON BORDER - DI TENGAH GARIS */
+/* ===================================== */
+.neon-border {
+    position: absolute;
+    top: -1.5px;
+    left: -1.5px;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    pointer-events: none;
+    z-index: 10;
+    
+    /* 1. TAMBAHKAN INI agar cahaya yang keluar tidak terpotong */
+    overflow: visible !important;
+}
+
+.neon-border rect {
+    x: 0;
+    y: 0;
+    width: 100%;
+    height: 100%;
+    rx: 12px;
+    ry: 12px;
+    
+    fill: none;
+    stroke: rgb(187, 181, 181);
+    stroke-width: 3;
+    
+    stroke-dasharray: 40 1200;
+    stroke-linecap: round;
+    
+    /* 2. UBAH ANGKA RADIUS (angka ketiga) agar sebaran lebih luas */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1))
+            drop-shadow(0 0 30px rgba(255, 255, 255, 0.8)) /* Naik ke 30px */
+            drop-shadow(0 0 60px rgba(255, 255, 255, 0.4)); /* Naik ke 60px untuk pendaran jauh */
+    
+    animation: neonFlow 5s linear infinite;
+}
+
+@keyframes neonFlow {
+    to {
+        stroke-dashoffset: -1240;
+    }
+}
+
+
+
+/* =============== */
+/* ANIMASI SLIDING */
+/* =============== */
+
+/* 1. Aktifkan navigasi otomatis antar halaman */
+@view-transition {
+  navigation: auto;
+}
+
+/* 2. Targetkan kartu login/signup */
+.card {
+    view-transition-name: neon-card;
+}
+
+/* 3. Animasi keluar (Halaman Lama) */
+::view-transition-old(neon-card) {
+    animation: 0.4s cubic-bezier(0.4, 0, 0.2, 1) both fade-out,
+               0.4s cubic-bezier(0.4, 0, 0.2, 1) both scale-down;
+}
+
+/* 4. Animasi masuk (Halaman Baru) */
+::view-transition-new(neon-card) {
+    animation: 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both fade-in,
+               0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both scale-up;
+}
+
+/* Definisi Gerakan Animasi */
+@keyframes fade-out {
+    to { opacity: 0; }
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+}
+@keyframes scale-down {
+    to { transform: scale(0.9) translateY(20px); filter: blur(10px); }
+}
+@keyframes scale-up {
+    from { transform: scale(1.1) translateY(-20px); filter: blur(10px); }
+}
+
+/* Tambahan: Animasi background supaya tidak kaku */
+::view-transition-group(root) {
+    animation-duration: 1s;
+}
+
+
+
+
+
+/* --- TEMA LIGHT & NAVIGASI TOMBOL --- */
+
+body.dashboard-light-theme {
+    background-color: #f0f2f5; /* Background sangat terang */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Navigasi Berbentuk Tombol (Button Nav Group) */
+.button-nav-group {
+    position: fixed;
+    top: 20px;
+    display: flex;
+    /* Gunakan flexbox untuk menata tombol */
+    gap: 10px; 
+    padding: 10px;
+    background: #ffffff; 
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+.nav-button {
+    color: #555; 
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    background: transparent; /* Tombol default transparan */
+}
+
+.nav-button:hover {
+    background: #e9ecef; /* Hover jadi abu muda */
+    color: #333;
+}
+
+.nav-button.active {
+    background: #007bff; /* Tombol aktif berwarna biru solid */
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+.logout-btn {
+    color: #dc3545;
+}
+
+/* Card di tengah (DIPERBESAR) */
+.dashboard-card {
+    background: #ffffff; 
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    color: #333;
+    max-width: 550px; /* MEMPERBESAR LEBAR KARTU */
+    padding: 40px; /* Tambah padding agar konten tidak sesak */
+}
+
+/* Jam Digital */
+#live-clock {
+    color: #333; 
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 4rem; /* Jam juga diperbesar */
+}
+
+#live-date {
+    color: #888;
+}
+
+/* Status Badge */
+.status-badge {
+    background: #e9ecef;
+    color: #007bff;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* Tombol Masuk/Pulang (Sudah diatur sebelumnya di CSS global) */
+
+
+
+
+
+
+/* --- LAPORAN STYLE BARU --- */
+
+.summary-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+.summary-card {
+    background: #f4f7f9;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.summary-card h3 {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.summary-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Warna aksen biru */
+}
+
+.table-container {
+    overflow-x: auto; 
+    margin-top: 20px;
+    border-radius: 8px; /* Sudut tabel yang lembut */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Garis pemisah halus */
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #e9ecef; /* Header abu muda */
+    font-weight: bold;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #fafafa; /* Efek hover di baris tabel */
+}
+
+
+
+
+
+
+
+.badge-masuk {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.badge-pulang {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
